@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Login</title>
+</head>
+<body>
+        <div class="container">
+              <a href="/"><img src="../static/logo.png" alt="FitMark" class="logo" /></a></p>
+                {% if message %}
+                <p class="message">{{ message | safe }}</p>
+                {% endif %}
+                <form action="/login" method="POST">
+                  <div class="form-group">
+                    <h3>Enter E-mail ID</h3>
+                    <input
+                      type="text"
+                      name="email"
+                      placeholder="Your E-mail ID"
+                    />
+                  </div>
+                  <input type="submit" value="Login" class="btn" />
+                </form>
+        </div>
+</body>
+</html>

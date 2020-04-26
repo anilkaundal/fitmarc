@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Calories intake</title>
+</head>
+<body>
+    <div class="container">
+    <a href="/"><img src="../static/logo.png" alt="FitMark" class="logo" /></a></p>
+      {% if message %}
+      <p class="message">{{ message | safe }}</p>
+      {% endif %}
+      <form action="/add" method="POST">
+    <div class="form-group">
+        <h3>Meal</h3>
+        <select name="meal">
+          <option value="">Select Meal</option>
+          <option value="Breakfast">Breakfast &#128523</option>
+          <option value="Lunch">Lunch &#129316</option>
+          <option value="Snacks">Snacks &#128554</option>
+          <option value="Dinner">Dinner &#128564</option>
+        </select>
+        <div class="form-group">
+            <h3>Add Food Item</h3>
+            <input
+              type="text"
+              name="item"
+              placeholder="Food Item"
+            />
+        </div>
+        <div class="form-group">
+            <h3>Add Calories</h3>
+            <input
+              type="text"
+              name="consumed"
+              placeholder="Calories From Food"
+            />
+        </div>
+        <div class="form-group">
+            <h3>Calories Burned</h3>
+            <input
+              type="text"
+              name="burned"
+              placeholder="Calories From Exercise"
+            />
+        </div>
+        <input type="submit" value="Add" class="btn" />
+      </form>
+      </div> 
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="container">
+      <a href="/"><img src="../static/logo.png" alt="FitMark" class="logo" /></a></p>
+      {% if message %}
+      <p class="message">{{ message | safe }}</p>
+      {% endif %}
+      <form action="/register" method="POST">
+        <div class="form-group">
+          <h3>Name</h3>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+          />
+        </div>
+        
+        <div class="form-group">
+          <h3>Gender</h3>
+          <input type="radio" name="gender" value="M" checked/> M
+          <input type="radio" name="gender" value="F" /> F
+        </div>
+        <div class="form-group">
+            <h3>Birthday</h3>
+            <input type="date" name="bday">
+        <div class="form-group">
+            <h3>Weight</h3>
+            <input
+              type="text"
+              name="weight"
+              placeholder="Your Weight (in kg)"
+            />
+            <div class="form-group">
+                <h3>Height</h3>
+                <input
+                  type="text"
+                  name="height"
+                  placeholder="Your Weight (in inches)"
+                />
+                <div class="form-group">
+                    <h3>Enter E-mail ID</h3>
+                    <input
+                      type="text"
+                      name="email"
+                      placeholder="Your E-mail ID"
+                />
+            <div class="form-group">
+                <h3>Calorie Goal<h5>Know <a href="/goals">more</a></h5></h3>
+                <select name="goal">
+                  <option value="">Select Goal</option>
+                  <option value="Moderate">Easy &#127939</option>
+                  <option value="Moderate">Moderate &#127939</option>
+                  <option value="Challenging">Challenging &#127947</option>
+                  <option value="Extreme">Extreme &#127940</option>
+                </select>
+                <div class="form-group">
+        <input type="submit" value="Register" class="btn" />
+      </form>
+    </div>
+  </body>
+</html>
